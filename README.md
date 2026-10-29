@@ -4,7 +4,7 @@ I got tired of manually copying messy protocols into Benchling, so I built a loc
 
 demo here: https://pvalissery.github.io/Bio-RAG/
 
-Sransferring legacy SOPs or scraping methods sections from scanned PDFs into your ELN or LIMS is a massive time sink. Whether you’re at a CRO, a biopharma CMC team, or just an academic lab, unstructured data is the bane of reproducible science. I was looking for a way to automate this without having to spin up a heavy backend or risk uploading sensitive protocols to some random third-party server. So, I built a serverless frontend tool that handles it locally.
+Transferring legacy SOPs or scraping methods sections from scanned PDFs into your ELN or LIMS is a massive time sink. Whether you’re at a CRO, a biopharma CMC team, or just an academic lab, unstructured data is the bane of reproducible science. I was looking for a way to automate this without having to spin up a heavy backend or risk uploading sensitive protocols to some random third-party server. So, I built a serverless frontend tool that handles it locally.
 
 ## How it actually works
 It’s not just a wrapper for a basic prompt. Getting an LLM to reliably extract just the reagents and chronologically order the steps without hallucinating extra details requires rigid structure. It uses Mozilla’s pdf.js to rip the text directly in your browser. No files are ever uploaded anywhere. It uses the Google Gemini API (gemini-3-flash-preview), but it forces a strictly defined JSON schema. This stops the model from rambling and guarantees you get a programmatically readable output (materials + volumes mapped correctly, steps sequenced). Copy-Paste Ready. The output renders into clean HTML tables you can instantly dump into Benchling, Labguru, or whatever ELN you're using
