@@ -1,6 +1,6 @@
 #  Bio-RAG: Lab Protocol & SOP Information Extractor
 
-I got tired of manually copying messy protocols into Benchling, so I built a local-first RAG tool that turns PDFs into structured JSON/tables. I built an entirely client-side web app called Bio-RAG. You drop in a PDF of a research paper, and it spits out a cleanly formatted table of reagents, volumes, and chronological steps. It runs in the browser, so your proprietary IP/ research is never exposed a random server.
+I got tired of manually copying protocols into Benchling, so I built a local-first RAG tool that turns PDFs into structured JSON/tables. I built an entirely client-side web app called Bio-RAG. You drop in a PDF of a research paper, and it spits out a cleanly formatted table of reagents, volumes, and chronological steps. It runs in the browser, so your proprietary IP/ research is never exposed a random server.
 
 demo here: https://pvalissery.github.io/Bio-RAG/
 
